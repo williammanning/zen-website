@@ -8,7 +8,7 @@ pipelines:
             sourceLocation: /
             repositoryName: npm
             inputResources:
-              - name: wm_GitRepo
+              - name: wmanning_gitRepo
             integrations:
               - name: ArtifactoryUnified
       
