@@ -1,0 +1,18 @@
+resources:
+  - name: wmanning_gitRepo
+    type: GitRepo
+    configuration:
+      path: williammanning/zen-website
+      gitProvider: Github_SolEng
+  - name: NpmBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtifactorySaaS
+      buildName: zen-npm-build
+      buildNumber: 1
+  - name: NpmBuildInfoPromoted
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtifactorySaaS
+      buildName: zen-npm-build
+      buildNumber: 1    
