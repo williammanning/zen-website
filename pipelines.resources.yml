@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: williammanning/zen-website
-      gitProvider: Github_SolEng
+      gitProvider: wmanning_gitRepo
   - name: NpmBuildInfo
     type: BuildInfo
     configuration:
