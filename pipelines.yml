@@ -28,7 +28,7 @@ pipelines:
           inputSteps:
             - name: zen_npm_demo_publish_frontend_demo
           integrations:
-            - name: ArtifactoryHA
+            - name: ArtifactoryUnified
           outputResources:
             - name: NpmBuildInfo
       
