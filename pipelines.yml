@@ -10,5 +10,5 @@ pipelines:
             inputResources:
               - name: wmanning_gitRepo
             integrations:
-              - name: ArtifactorySaaS
+              - name: artifactory
       

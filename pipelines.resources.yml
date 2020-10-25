@@ -7,12 +7,12 @@ resources:
   - name: NpmBuildInfo
     type: BuildInfo
     configuration:
-      sourceArtifactory: ArtifactorySaaS
+      sourceArtifactory: artifactory
       buildName: zen-npm-build
       buildNumber: 1
   - name: NpmBuildInfoPromoted
     type: BuildInfo
     configuration:
-      sourceArtifactory: ArtifactorySaaS
+      sourceArtifactory: artifactory
       buildName: zen-npm-build
       buildNumber: 1    
