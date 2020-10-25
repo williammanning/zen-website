@@ -1,5 +1,5 @@
 pipelines:
-  - name: zen-npm-demo
+  - name: zen_npm_demo
     steps:
       - name: zen_frontend
         type: NpmBuild
