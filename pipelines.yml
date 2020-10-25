@@ -16,7 +16,7 @@ pipelines:
         configuration:
           repositoryName: npm-dev-local
           autoPublishBuildInfo: true
-          forceXrayScan: false 
+          forceXrayScan: true 
           inputSteps:
             - name: zen_frontend
           integrations:
