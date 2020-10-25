@@ -15,20 +15,16 @@ pipelines:
         type: NpmPublish
         configuration:
           repositoryName: npm-dev-local
+          autoPublishBuildInfo: true
+          forceXrayScan: false 
           inputSteps:
             - name: zen_frontend
           integrations:
             - name: ArtifactoryUnified
+          outputResources:
+            - name: NpmBuildInfo
         execution:
           onStart:
             - export inputNpmBuildStepName="zen_frontend"
-      - name: zen_npm_demo_publish_build_info
-        type: PublishBuildInfo
-        configuration:
-          inputSteps:
-            - name: zen_npm_demo_publish_frontend_demo
-          integrations:
-            - name: ArtifactoryUnified
-          outputResources:
-            - name: NpmBuildInfo
+
       
