@@ -10,5 +10,5 @@ pipelines:
             inputResources:
               - name: wm_GitRepo
             integrations:
-              - name: ArtifactoryHA
+              - name: ArtifactoryUnified
       
