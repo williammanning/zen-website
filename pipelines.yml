@@ -11,4 +11,15 @@ pipelines:
             - name: wmanning_gitRepo
           integrations:
             - name: ArtifactoryUnified
+      - name: zen_npm_demo_publish_frontend_demo
+        type: NpmPublish
+        configuration:
+          repositoryName: npm-dev-local
+          inputSteps:
+            - name: zen_npm_demo
+          integrations:
+            - name: ArtifactoryHA
+        execution:
+          onStart:
+            - export inputNpmBuildStepName="zen_npm_demo"
       
