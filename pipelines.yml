@@ -22,4 +22,13 @@ pipelines:
         execution:
           onStart:
             - export inputNpmBuildStepName="zen_frontend"
+      - name: zen_npm_demo_publish_build_info
+        type: PublishBuildInfo
+        configuration:
+          inputSteps:
+            - name: zen_npm_demo_publish_frontend_demo
+              integrations:
+            - name: ArtifactoryHA
+          outputResources:
+            - name: NpmBuildInfo
       
