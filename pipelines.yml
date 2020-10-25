@@ -16,7 +16,7 @@ pipelines:
         configuration:
           repositoryName: npm-dev-local
           inputSteps:
-            - name: zen_npm_demo
+            - name: zen_frontend
           integrations:
             - name: ArtifactoryUnified
         execution:
