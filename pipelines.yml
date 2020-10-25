@@ -18,7 +18,7 @@ pipelines:
           inputSteps:
             - name: zen_npm_demo
           integrations:
-            - name: ArtifactoryHA
+            - name: ArtifactoryUnified
         execution:
           onStart:
             - export inputNpmBuildStepName="zen_npm_demo"
