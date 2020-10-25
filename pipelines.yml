@@ -1,7 +1,7 @@
 pipelines:
   - name: zen-npm-demo
     steps:
-      - name: bld_frontend
+      - name: zen_frontend
         type: NpmBuild
         configuration:
             npmArgs: --no-progress --no-audit
