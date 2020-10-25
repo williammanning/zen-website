@@ -4,11 +4,11 @@ pipelines:
       - name: zen_frontend
         type: NpmBuild
         configuration:
-            npmArgs: --no-progress --no-audit
-            sourceLocation: /
-            repositoryName: npm
-            inputResources:
-              - name: wmanning_gitRepo
-            integrations:
-              - name: ArtifactoryUnified
+          npmArgs: --no-progress --no-audit
+          sourceLocation: /
+          repositoryName: npm
+          inputResources:
+            - name: wmanning_gitRepo
+          integrations:
+            - name: ArtifactoryUnified
       
