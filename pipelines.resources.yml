@@ -1,5 +1,5 @@
 resources:
-  - name: wmanning_gitRepo
+  - name: GitHub
     type: GitRepo
     configuration:
       path: williammanning/zen-website
