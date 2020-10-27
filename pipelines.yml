@@ -4,7 +4,7 @@ pipelines:
       - name: zen_frontend
         type: NpmBuild
         configuration:
-          npmArgs: --no-progress --no-audit
+          npmArgs: 
           sourceLocation: /
           repositoryName: npm
           inputResources:
