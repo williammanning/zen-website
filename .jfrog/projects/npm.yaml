@@ -1,0 +1,8 @@
+version: 1
+type: npm
+resolver:
+  repo: npm-remote
+  serverId: artifactory
+deployer:
+  repo: npm-dev-local
+  serverId: artifactory
