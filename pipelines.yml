@@ -4,7 +4,6 @@ pipelines:
       - name: zen_frontend
         type: NpmBuild
         configuration:
-          npmArgs: 
           sourceLocation: /
           repositoryName: npm
           inputResources:
