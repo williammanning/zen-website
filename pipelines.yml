@@ -14,7 +14,7 @@ pipelines:
       - name: zen_npm_demo_publish_frontend_demo
         type: NpmPublish
         configuration:
-          repositoryName: npm
+          repositoryName: npm-dev-local
           autoPublishBuildInfo: true
           forceXrayScan: false 
           inputSteps:
