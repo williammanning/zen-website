@@ -21,3 +21,4 @@
 * jfrog rt build-collect-env ZenNodeProject  1.0.1
 * jfrog rt npm-publish --build-name=ZenNodeProject --build-number=1.0.1
 * jfrog rt build-publish ZenNodeProject 1.0.1
+* Test
