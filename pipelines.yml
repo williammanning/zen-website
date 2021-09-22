@@ -14,7 +14,7 @@ pipelines:
       - name: NpmBuildPublish
         type: NpmPublish
         configuration:
-          repositoryName: npm
+          deployerRepo: npm
           autoPublishBuildInfo: true
           forceXrayScan: false 
           inputSteps:
