@@ -23,9 +23,6 @@ pipelines:
             - name: ArtifactoryUnified
           outputResources:
             - name: NpmBuildInfo
-        execution:
-          onStart:
-            - export inputNpmBuildStepName="zen_frontend"
       - name: NpmBuildInfoPromotedQA
         type: PromoteBuild
         configuration:
