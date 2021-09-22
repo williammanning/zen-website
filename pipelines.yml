@@ -64,7 +64,5 @@ pipelines:
           description: "Zen NPM Release Bundle"
           inputResources:
             - name: NpmBuildInfoPromotedProd
-          outputResources:
-            - name: ZenReleaseBundle
 
       
