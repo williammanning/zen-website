@@ -56,10 +56,13 @@ pipelines:
         configuration:
           releaseBundleName: ZenReleaseBundle
           releaseBundleVersion: v1.0.$run_number
+          failOnValidate: true
           dryRun: false
           sign: true
           description: "Zen NPM Release Bundle"
           inputResources:
             - name: NpmBuildInfoPromotedProd
+          outputResources:
+            - name: NpmBuildReleaseBundleSigned
 
       
