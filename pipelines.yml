@@ -1,7 +1,7 @@
 pipelines:
   - name: zen_npm_demo_pipelines
     steps:
-      - name: NpmBuild
+      - name: NpmZenBuild
         type: NpmBuild
         configuration:
           npmArgs: --no-progress --no-audit
@@ -18,7 +18,7 @@ pipelines:
           autoPublishBuildInfo: true
           forceXrayScan: false 
           inputSteps:
-            - name: NpmBuild
+            - name: NpmZenBuild
           integrations:
             - name: ArtifactoryUnified
           outputResources:
@@ -39,7 +39,7 @@ pipelines:
           inputResources:
             - name: NpmBuildInfo
           outputResources:
-            - name: NpmBuildInfoPromotedQA
+            - name: promoteNpmBuildQA
       - name: promoteNpmBuildProd
         type: PromoteBuild
         configuration:
@@ -51,7 +51,7 @@ pipelines:
           integrations:
             - name: ArtifactoryUnified
           inputResources:
-            - name: NpmBuildInfoPromotedQA
+            - name: promoteNpmBuildQA
           outputResources:
             - name: promoteNpmBuildProd
       - name: NPMZenBundle
