@@ -32,7 +32,7 @@ pipelines:
           targetRepository: npm-release-local
           includeDependencies: true    
           status: "Released" 
-          comment: "This is Zen Front End is ready for release"
+          comment: "This build has passed all QA testing"
           copy: true
           integrations:
             - name: ArtifactoryUnified
@@ -46,7 +46,7 @@ pipelines:
           targetRepository: npm-release-local
           includeDependencies: true    
           status: "QA - Tested" 
-          comment: "This build has passed all QA testing"
+          comment: "This is Zen Front End is ready for release"
           copy: true
           integrations:
             - name: ArtifactoryUnified
