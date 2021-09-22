@@ -15,4 +15,18 @@ resources:
     configuration:
       sourceArtifactory: ArtifactoryUnified
       buildName: zen-npm-build
-      buildNumber: 1    
+      buildNumber: 1
+  - name: NpmBuildReleaseBundle
+    type: ReleaseBundle
+    configuration:
+      sourceDistribution: DistributionCluster
+      name: ZenReleaseBundle
+      version: v1.0.0
+      isSigned: false
+  - name: NpmBuildReleaseBundleSigned
+    type: ReleaseBundle
+    configuration:
+      sourceDistribution: DistributionCluster
+      name: ZenReleaseBundle
+      version: v1.0.0
+      isSigned: true    

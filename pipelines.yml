@@ -1,7 +1,7 @@
 pipelines:
   - name: zen_npm_demo_pipelines
     steps:
-      - name: zen_frontend
+      - name: NpmBuild
         type: NpmBuild
         configuration:
           npmArgs: --no-progress --no-audit
@@ -11,14 +11,14 @@ pipelines:
             - name: wmanning_gitRepo
           integrations:
             - name: ArtifactoryUnified
-      - name: zen_npm_demo_publish_frontend_demo
+      - name: NpmBuildPublish
         type: NpmPublish
         configuration:
           repositoryName: npm
           autoPublishBuildInfo: true
           forceXrayScan: false 
           inputSteps:
-            - name: zen_frontend
+            - name: NpmBuild
           integrations:
             - name: ArtifactoryUnified
           outputResources:
@@ -26,5 +26,45 @@ pipelines:
         execution:
           onStart:
             - export inputNpmBuildStepName="zen_frontend"
+      - name: promoteNpmBuildQA
+        type: PromoteBuild
+        configuration:
+          targetRepository: npm-release-local
+          includeDependencies: true    
+          status: "Released" 
+          comment: "This is Zen Front End is ready for release"
+          copy: true
+          integrations:
+            - name: ArtifactoryHA
+          inputResources:
+            - name: NpmBuildInfo
+          outputResources:
+            - name: NpmBuildInfoPromotedQA
+      - name: promoteNpmBuildProd
+        type: PromoteBuild
+        configuration:
+          targetRepository: npm-release-local
+          includeDependencies: true    
+          status: "QA - Tested" 
+          comment: "This build has passed all QA testing"
+          copy: true
+          integrations:
+            - name: ArtifactoryHA
+          inputResources:
+            - name: NpmBuildInfoPromotedQA
+          outputResources:
+            - name: promoteNpmBuildProd
+      - name: NPMZenBundle
+        type: CreateReleaseBundle
+        configuration:
+          releaseBundleName: NPMZenBundle
+          releaseBundleVersion: v1.0.$run_number
+          dryRun: false
+          sign: true
+          description: "Zen NPM Release Bundle"
+          inputResources:
+            - name: promoteNpmBuildProd
+          outputResources:
+            - name: NPMZenBundle
 
       
