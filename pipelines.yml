@@ -65,6 +65,6 @@ pipelines:
           inputResources:
             - name: NpmBuildInfoPromotedProd
           outputResources:
-            - name: NPMZenBundle
+            - name: ZenReleaseBundle
 
       
