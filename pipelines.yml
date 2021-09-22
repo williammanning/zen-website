@@ -39,7 +39,7 @@ pipelines:
           inputResources:
             - name: NpmBuildInfo
           outputResources:
-            - name: NpmBuildQA
+            - name: NpmBuildInfoPromotedQA
       - name: NpmBuildInfoPromotedProd
         type: PromoteBuild
         configuration:
@@ -57,7 +57,7 @@ pipelines:
       - name: NPMZenBundle
         type: CreateReleaseBundle
         configuration:
-          releaseBundleName: NPMZenBundle
+          releaseBundleName: ZenReleaseBundle
           releaseBundleVersion: v1.0.$run_number
           dryRun: false
           sign: true
