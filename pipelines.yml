@@ -35,7 +35,7 @@ pipelines:
           comment: "This is Zen Front End is ready for release"
           copy: true
           integrations:
-            - name: ArtifactoryHA
+            - name: ArtifactoryUnified
           inputResources:
             - name: NpmBuildInfo
           outputResources:
@@ -49,7 +49,7 @@ pipelines:
           comment: "This build has passed all QA testing"
           copy: true
           integrations:
-            - name: ArtifactoryHA
+            - name: ArtifactoryUnified
           inputResources:
             - name: NpmBuildInfoPromotedQA
           outputResources:

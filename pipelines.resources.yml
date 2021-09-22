@@ -19,14 +19,14 @@ resources:
   - name: NpmBuildReleaseBundle
     type: ReleaseBundle
     configuration:
-      sourceDistribution: DistributionCluster
+      sourceDistribution: Distribution
       name: ZenReleaseBundle
       version: v1.0.0
       isSigned: false
   - name: NpmBuildReleaseBundleSigned
     type: ReleaseBundle
     configuration:
-      sourceDistribution: DistributionCluster
+      sourceDistribution: Distribution
       name: ZenReleaseBundle
       version: v1.0.0
       isSigned: true    
