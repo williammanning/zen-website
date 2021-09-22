@@ -48,7 +48,7 @@ pipelines:
           integrations:
             - name: ArtifactoryUnified
           inputResources:
-            - name: NpmBuildInfoPromotedQA
+            - name: NpmBuildInfo
           outputResources:
             - name: NpmBuildInfoPromotedProd
       - name: NPMZenBundle
