@@ -26,7 +26,7 @@ pipelines:
       - name: NpmBuildInfoPromotedQA
         type: PromoteBuild
         configuration:
-          targetRepository: npm-release-local
+          targetRepository: npm-qa-local
           includeDependencies: true    
           status: "Released" 
           comment: "This build has passed all QA testing"
