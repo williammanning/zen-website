@@ -26,7 +26,7 @@ pipelines:
         execution:
           onStart:
             - export inputNpmBuildStepName="zen_frontend"
-      - name: promoteNpmBuildQA
+      - name: NpmBuildInfoPromotedQA
         type: PromoteBuild
         configuration:
           targetRepository: npm-release-local
@@ -39,8 +39,8 @@ pipelines:
           inputResources:
             - name: NpmBuildInfo
           outputResources:
-            - name: promoteNpmBuildQA
-      - name: promoteNpmBuildProd
+            - name: NpmBuildQA
+      - name: NpmBuildInfoPromotedProd
         type: PromoteBuild
         configuration:
           targetRepository: npm-release-local
@@ -51,9 +51,9 @@ pipelines:
           integrations:
             - name: ArtifactoryUnified
           inputResources:
-            - name: promoteNpmBuildQA
+            - name: NpmBuildInfoPromotedQA
           outputResources:
-            - name: promoteNpmBuildProd
+            - name: NpmBuildInfoPromotedProd
       - name: NPMZenBundle
         type: CreateReleaseBundle
         configuration:
@@ -63,7 +63,7 @@ pipelines:
           sign: true
           description: "Zen NPM Release Bundle"
           inputResources:
-            - name: promoteNpmBuildProd
+            - name: NpmBuildInfoPromotedProd
           outputResources:
             - name: NPMZenBundle
 

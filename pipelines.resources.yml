@@ -10,7 +10,13 @@ resources:
       sourceArtifactory: ArtifactoryUnified
       buildName: zen-npm-build
       buildNumber: 1
-  - name: NpmBuildInfoPromoted
+  - name: NpmBuildInfoPromotedQA
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: ArtifactoryUnified
+      buildName: zen-npm-build
+      buildNumber: 1
+  - name: NpmBuildInfoPromotedProd
     type: BuildInfo
     configuration:
       sourceArtifactory: ArtifactoryUnified
