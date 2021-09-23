@@ -11,9 +11,9 @@ pipelines:
             - name: wmanning_gitRepo
           integrations:
             - name: ArtifactoryUnified
-          execution:
-            onStart:
-              - sed -i "s/1.0.0/1.0.$BUILD_NUMBER/g" package.json
+        execution:
+          onStart:
+            - sed -ie "s/1.0.0/1.0.$BUILD_NUMBER/g" package.json
       - name: NpmBuildPublish
         type: NpmPublish
         configuration:
