@@ -33,7 +33,7 @@ pipelines:
           targetRepository: npm-qa-local
           includeDependencies: true    
           status: "QA-Tested" 
-          comment: "This build has passed all QA testing"
+          comment: "This build has passed all QA testing > $run_number"
           copy: true
           integrations:
             - name: ArtifactoryUnified
@@ -47,7 +47,7 @@ pipelines:
           targetRepository: npm-release-local
           includeDependencies: true    
           status: "Released" 
-          comment: "This is Zen Front End is ready for release"
+          comment: "This is Zen Front End is ready for release > $run_number"
           copy: true
           integrations:
             - name: ArtifactoryUnified
@@ -64,6 +64,9 @@ pipelines:
           dryRun: false
           sign: true
           description: "Zen NPM Release Bundle"
+          releaseNotes:                        
+            content: "plain_text"
+            syntax: "Thsi is the latest Zen Website release > $run_number"
           inputResources:
             - name: NpmBuildInfoPromotedProd
           outputResources:
