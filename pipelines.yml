@@ -66,7 +66,7 @@ pipelines:
           description: "Zen NPM Release Bundle"
           releaseNotes:                        
             syntax: "markdown"
-            content: "This is the latest Zen Website release > $run_number"
+            content: "This is the latest Zen Website release. Light it up!"
           inputResources:
             - name: NpmBuildInfoPromotedProd
           outputResources:
