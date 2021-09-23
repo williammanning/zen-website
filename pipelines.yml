@@ -13,7 +13,7 @@ pipelines:
             - name: ArtifactoryUnified
         execution:
           onStart:
-            - sed -ie "s/1.0.0/1.0.$BUILD_NUMBER/g" $res_wmanning_gitRepo_resourcePath/package.json
+            - sed -ie "s/1.0.0/1.0.$run_number/g" $res_wmanning_gitRepo_resourcePath/package.json
       - name: NpmBuildPublish
         type: NpmPublish
         configuration:
