@@ -14,6 +14,7 @@ pipelines:
         execution:
           onStart:
             - sed -ie "s/1.0.0/1.0.$run_number/g" $res_wmanning_gitRepo_resourcePath/package.json
+            - save_tests $res_wmanning_gitRepo_resourcePath/sample_test.xml
       - name: NpmBuildPublish
         type: NpmPublish
         configuration:
