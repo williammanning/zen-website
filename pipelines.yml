@@ -11,6 +11,9 @@ pipelines:
             - name: wmanning_gitRepo
           integrations:
             - name: ArtifactoryUnified
+          execution:
+            onStart:
+              - sed -i "s/1.0.0/1.0.$BUILD_NUMBER/g" package.json
       - name: NpmBuildPublish
         type: NpmPublish
         configuration:
@@ -56,7 +59,7 @@ pipelines:
         configuration:
           releaseBundleName: ZenReleaseBundle
           releaseBundleVersion: v1.0.$run_number
-          failOnValidate: false
+          failOnValidate: false   
           dryRun: false
           sign: true
           description: "Zen NPM Release Bundle"
