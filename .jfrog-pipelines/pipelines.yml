@@ -44,7 +44,7 @@ pipelines:
       - name: NpmBuildInfoPromotedProd
         type: PromoteBuild
         configuration:
-          targetRepository: npm-release-local
+          targetRepository: npm-prod-local
           includeDependencies: true    
           status: "Released" 
           comment: "This is Zen Front End is ready for release > $run_number"
